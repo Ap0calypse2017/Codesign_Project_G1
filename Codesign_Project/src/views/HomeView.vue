@@ -1,4 +1,11 @@
 <template>
+  <GoogleTranslateSelect
+      default-language-code="en"
+      default-page-language-code="en"
+      :fetch-browser-language="false"
+      trigger="click"
+      @select="handleGoogleTranslateSelect"
+  />
   <div class="mainContainer flex flex-column align-items-center justify-content-center">
     <h1>
       Explore SPOR10
@@ -94,6 +101,7 @@ import Divider from "primevue/divider";
 import Card from 'primevue/card'
 import Timeline from "primevue/timeline";
 import 'primeicons/primeicons.css'
+import GoogleTranslateSelect from "@google-translate-select/vue3";
 
 
 export default {
@@ -102,7 +110,8 @@ export default {
     Carousel,
     Divider,
     Card,
-    Timeline
+    Timeline,
+    GoogleTranslateSelect
   },
   data() {
     return {
