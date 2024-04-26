@@ -7,7 +7,7 @@
       @select="handleGoogleTranslateSelect"
   />
   <div class="mainContainer flex flex-column align-items-center justify-content-center">
-    <h1>
+    <h1 @dblclick="visibleBottom=true">
       Explore SPOR10
     </h1>
     <div class="flex flex-column align-items-center justify-content-center ">
@@ -125,7 +125,25 @@
         </template>
       </Timeline>
     </div>
+    <footer class="flex flex-column w-full mt-5 pl-8 pr-8 pb-8" style="background-color:#4c4c4c; color:white">
+      <div class="flex align-items-center justify-content-center">
+        <h3>CONTACT SPORT10</h3>
+      </div>
+      <div class="flex flex-column xl:flex-row xl:gap-4 gap-0 justify-content-between">
+        <div class="flex flex-column">
+          <a href="https://spor10jernbanebyen.dk/" class="text-white">Visit the official site</a>
+        </div>
+        <div class="flex flex-column xl:gap-4 gap-1 justify-content-start">
+          <p class="flex flex-row gap-2"><i class="pi pi-instagram" style="font-size: 100%"></i><a href="https://www.instagram.com/spor10_jernbanebyen/" class="text-white">Instagram</a></p>
+          <p class="flex flex-row gap-2"><i class="pi pi-envelope" style="font-size: 100%"></i> <a href="mailto:info@spor10jernbanebyen.dk" class="text-white">info@spor10jernbanebyen.dk</a></p>
+        </div>
+      </div>
+    </footer>
   </div>
+  <Sidebar v-model:visible="visibleBottom" header="Credits" position="bottom" style="height: auto">
+    <p>Website created as final project for Co-Design, Spring Semester 2024, ITU Copenhagen</p>
+    <p>Made by: Filippo Piloni, Helena Do, Hugo Reinicke, Johan-emil Pico and Nereid Totayo</p>
+  </Sidebar>
 </template>
 <script>
 import Galleria from "primevue/galleria";
@@ -134,6 +152,8 @@ import Divider from "primevue/divider";
 import Card from 'primevue/card'
 import Timeline from "primevue/timeline";
 import Button from 'primevue/button';
+
+import Sidebar from 'primevue/sidebar';
 import 'primeicons/primeicons.css'
 import GoogleTranslateSelect from "@google-translate-select/vue3";
 
@@ -145,11 +165,14 @@ export default {
     Divider,
     Card,
     Timeline,
-    GoogleTranslateSelect
+    GoogleTranslateSelect,
+    Button,
+    Sidebar
   },
   data() {
     return {
       activeIndex: 2,
+      visibleBottom: false,
       responsiveOptions: [
         {
           breakpoint: '1300px',
@@ -197,6 +220,11 @@ export default {
   },
 }
 </script>
+<style>
+body {
+  margin:0;
+}
+</style>
 <style scoped>
 @keyframes slidedown-icon {
   0% {
