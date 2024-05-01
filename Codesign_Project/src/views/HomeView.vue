@@ -89,13 +89,11 @@
           <img alt="user header" src="@/assets/images/Dinner.png" class="max-h-30rem"/>
         </template>
         <template #title>Community Dinner</template>
-        <template #subtitle>Card subtitle</template>
         <template #content>
           <p class="m-0 text-ms xl:text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae
-            numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse,
-            cupiditate neque
-            quas!
+            If you are craving a social dinner on a wednesday, Noon got you covered.<br>
+            With the community driven dinner that is served for a measly 95 kroner, Noon cooks a dinner set in a social setting.<br>
+            By using community tables it is easy to bring friends, family or strangers together for a nice dinner.<br><br><br>
           </p>
         </template>
       </Card>
@@ -106,13 +104,9 @@
                class="max-h-30rem"/>
         </template>
         <template #title>Skating Hall</template>
-        <template #subtitle>Card subtitle</template>
         <template #content>
           <p class="m-0">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae
-            numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse,
-            cupiditate neque
-            quas!
+            In the last of the big hall at SPOR10 is a large skatehall. In this hall tons of kids skate around on their scooters, fix their scooters and just hang out. The large amount of ramps in the hall has all been made by the users of the hall and therefore have become a nice room to relax in, both for the users of the ramps as well as parents and other interested parties.
           </p>
         </template>
       </Card>
@@ -121,13 +115,11 @@
           <img alt="user header" src="@/assets/images/Art.png" class="max-h-30rem"/>
         </template>
         <template #title>Art Workshop</template>
-        <template #subtitle>Card subtitle</template>
         <template #content>
           <p class="m-0 ">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae
-            numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse,
-            cupiditate neque
-            quas!
+            Get to experience a back-in-time experience!<br>
+            Enjoy some drawing with the SPOR10 artist Jeppe Eisner with homemade paint. Relax and drink a cup of coffee while you let your creativity  take over.<br>
+            If you don't want to bring home your masterpiece, just hand it to Jeppe, he will make sure to hang it in a special place at SPORT10
           </p>
         </template>
       </Card>
@@ -211,19 +203,20 @@ export default {
               "Enjoy some drawing with the SPOR10 artist Jeppe Eisner with homemade paint. Relax and drink a cup of coffee while you let your creativity  take over." +
               " If you don't want to bring home your masterpiece, just hand it to Jeppe, he will make sure to hang it in a special place at SPORT10"},
         {title: 'Enjoy some biking', icon: "pi pi-warehouse", color: "#27b02e", subtitle: 'Do you want to connect with people across generations. "Cycling without age" is a cycle-focused event where people across all ages agrees to cycle together. The event is about cycling around the neighborhood and offers a cycle rickshaw that you can ride around on if you are unable to cycle.'},
-        {title: 'Play board games', icon: "pi pi-th-large", color: "#7e1c91", subtitle: ""},
-        {title: 'Join the community dinner', icon: "pi pi-shop", color: "#b06527", subtitle: ""},
+        {title: 'Play board games', icon: "pi pi-th-large", color: "#7e1c91", subtitle: "Just within the main gates of SPOR10, in the main hall, is a cozy area in which you can relax in the couches and or play board games in. If you want to sit and enjoy such an event with or without a cup of coffee, this might be for you."},
+        {title: 'Join the community dinner', icon: "pi pi-shop", color: "#b06527", subtitle: "If you are craving a social dinner on a wednesday, Noon got you covered. with the community driven dinner that is served for a measly 95 kroner, Noon cooks a dinner set in a social setting. By using community tables it is easy to bring friends, family or strangers together for a nice dinner."},
       ]
     }
   },
   mounted() {
-    document.querySelector(".mainContainer").style.opacity = 0
+    document.querySelector(".mainContainer").style.opacity = 0;
     setTimeout(() => {
       this.toggleEnvelope();
     }, 1000);
     setTimeout(() => {
-      document.querySelector(".mainContainer").style.opacity = 1;
+
       document.querySelector(".envelope-wrapper").style.display = "none";
+      document.querySelector(".mainContainer").style.opacity = 1;
     }, 5000);
   },
   methods: {
